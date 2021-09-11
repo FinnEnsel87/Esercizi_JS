@@ -17,10 +17,11 @@ function calculateSalary(role) {
         return 'Cto => ' + 1800 + currency;
     }
     else if (role === 'developer') {
-        return 'Developer => ' + 1800 + currency;
+        return 'Developer => ' + 1500 + currency;
     }
+    
     else
-        return 'other => ' + 1000 + currency;
+    return 'other => ' + 1000 + currency;
 }
 
 const currency = '€';
@@ -37,3 +38,4 @@ console.log(managerSalary);
 console.log(ctoSalary);
 console.log(developerSalary);
 console.log(otherSalary);
+// controllato nella soluzione potevo anche usare nella condizione else if che ha return di 1800 (role === 'manager'), operatore or || per il role 'cto' . Avrei rispettato anche regola DRY.
