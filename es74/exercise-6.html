@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button> <br>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  window.addEventListener('DOMContentLoaded', initForm);
+  function initForm(){
+    const html = `
+    FirstName : <input id='fn' type="text" placeholder="firstName"> <br>
+    LastName : <input id='ln' type="text" placeholder="lastName"> <br>
+    Age : <input id='ag' type="text" placeholder="age">
+    `
+    document.getElementById('person-form').innerHTML += html;
+  };
+  const submit = document.querySelector('form');
+  submit.addEventListener('submit', submitPersonForm)
+  
+  function submitPersonForm (){
+    event.preventDefault();
+    const person = {
+      FirstName : document.getElementById('fn').value,
+      LastName : document.getElementById('ln').value,
+      Age : document.getElementById('ag').value
+    }
+    console.log(person);
+  }
+
+  
+</script>

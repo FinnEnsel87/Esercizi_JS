@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  const list_item = document.querySelectorAll('li');
+  list_item.forEach(li => {
+    
+
+    li.addEventListener('mouseover', () => {
+      li.style.backgroundColor = 'red';
+      li.style.width = '100px';
+    });
+
+    li.addEventListener('mouseout', () => {
+      li.style.backgroundColor = 'transparent';
+    })
+    
+
+  })
+</script>
