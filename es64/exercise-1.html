@@ -12,7 +12,7 @@
   document.getElementById('fetch-post').addEventListener('click', save);
   async function save(){
     let response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
-    data = await response.json();
+    let data = await response.json();
     console.log(data);
   }
 
